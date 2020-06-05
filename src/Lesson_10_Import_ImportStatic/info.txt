@@ -1,0 +1,17 @@
+Import
+import Package.*- импортирование всех классов из пакета
+import Package.Class-импортирование определенного класса  из определенного пакета
+import statement - должен идти после строчки пакета и до описания класса
+
+Subpackages and import
+import Package.subpackage.*-импорт из подпокетов
+
+static import импорт и использывание статических переменных
+import static Package.Class.variables
+int x=a;
+сттичный импорт импортирует все статические элементы или только определенный
+
+Comments
+//(end-of-line)-коментирует до конца строки
+/*...*/(multiline)-коментирует все что внутри
+/**...*/(JavaDoc)-описывает класс

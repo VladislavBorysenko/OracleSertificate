@@ -1,0 +1,22 @@
+Синтаксис SWITCH CASE statement
+
+switch(expression){
+case value1: our code; break;
+case value2: our code; break;
+case value3: our code; break;
+default: our code; break;
+}
+
+тип данных switch expression
+-byte
+-short
+-int
+-char
+-String
+
+COMPILE TIME CONSTANCE (То что может быть в case)
+
+3.14, "Privet", 5*10------------Yes
+a=5, b=10, a*b------------------No
+final a=5, final b=10, a*b------Yes
+final a, final b, a=5 b=10 a*b--NO

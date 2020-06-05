@@ -1,0 +1,57 @@
+1 Flow Control-контроль хода программы
+Flow Control можно поделить на две части:
+-selection -это когда нам предстоит выбрать
+-loping - когда нам предстоит повторять что-то
+
+ Синтаксиси if statement
+
+  if(boolean expression)  //внутри скобок должно быть логическое действие
+--------------------------------
+if(boolean expression){
+  our code }
+  ------------------------------
+  if(boolean expression){
+  our code }
+  else {
+  our code }
+--------------------------------
+if(boolean expression){
+  our code }
+  else if(boolean expression){
+  our code }
+  else {
+  our code }
+--------------------------------
+if внутри if
+
+if(boolean expression)
+if(boolean expression)
+{our code}
+else{our code}
+else{our code}
+////////////////////////////////////////////////
+
+= == equals
+= -присваивание
+== -сравнение
+
+--Works OK--                      |          --Logical error--
+boolean b=false;                  |          boolean b=false;
+if (b==true){                     |          if(b=true){
+our code}                         |          our code }
+                                  |
+--Works OK--                      |          --Compile ERROR--
+boolean b=false;                  |          int i=5;
+if(b)                             |          if(i=10)
+{our code}                        |          {our code}
+                                  |
+--Logical error--                 |             --Logical error--
+String st1=new String ("Hello");  |          String st1=new String ("Hello");
+String st2=new String ("Hello");  |          String st2=new String ("Hello");
+if(st1.equals(st2))               |          if(st1==st2)
+{our code}                        |          {our code}
+
+Метод equals сравнивает обьекты (а тип данных стринг это референс тип данных и его необходимо сравнивать через equals)
+
+Ternary operator
+(boolean expresion) ? (if true) : (if false)

@@ -80,3 +80,8 @@ ________________________________________________________________________________
         String s6="privet,";
         s6=s6.concat(s5);
         System.out.println(s6);//privet,drug
+ ___________________________________________________________________________________________________________
+9) toLowerCase()-->String               |--Метод не принимает никаких параметров и выводит String в нижнем регистре
+String s="Privet ANDREY";
+        String s2=s.toLowerCase();
+        System.out.println(s2);//privet andrey

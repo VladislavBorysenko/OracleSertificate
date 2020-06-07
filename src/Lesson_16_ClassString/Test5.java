@@ -5,5 +5,6 @@ public class Test5 {
         String s="Privet ANDREY";
         String s2=s.toLowerCase();
         System.out.println(s2);
+        System.out.println(s.toUpperCase());
     }
 }

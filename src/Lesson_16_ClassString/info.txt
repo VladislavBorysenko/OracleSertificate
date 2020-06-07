@@ -85,3 +85,29 @@ ________________________________________________________________________________
 String s="Privet ANDREY";
         String s2=s.toLowerCase();
         System.out.println(s2);//privet andrey
+___________________________________________________________________________________________________________
+10) toUpperCase()-->String              |--Метод не принимает никаких параметров и выводит String в верхнем
+String s="Privet ANDREY";
+System.out.println(s.toUpperCase());//PRIVET ANDREY
+___________________________________________________________________________________________________________
+11) contains(String str)-->boolean      |--Метод принимает String , проверяет текст на содержание String-а и возвращает boolean
+String s1="Kak sebya chuvstvuesh?";
+boolean b=s1.contains("bya");
+        System.out.println(b);//true
+___________________________________________________________________________________________________________
+
+-------------------------------При method chaining методы выполняются последовательно слева на право--------------------------------------
+method chaining-цепочка методов
+
+String s1="Kak sebya chuvstvuesh?";
+String s2="Hello word";
+String s3=s1.concat(s2).trim().replace("word","mir").substring(6,10); (так же мы создали и 4 обьекта)
+                1         2             3                   4
+        System.out.println(s3);
+        System.out.println(s1.substring(s1.indexOf('b')));
+//bya
+//bya chuvstvuesh?
+
+----------------------------Определение равенства String---------------------------------------------------------------------------------------
+
+==

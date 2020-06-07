@@ -1,0 +1,41 @@
+WHILE  DO WHILE
+while loop - мы использум условие, и количество повторений мы заранее не знаем
+condition - условие
+condition = true or false
+пока condition == true цикл будет работать
+while(condition){
+Statement 1;
+Statement 2;
+...........;
+Statement n;
+}
+
+Минимальная реализация:
+while(a==10);
+
+do while -делай пока наше условие true
+
+do{
+Statement 1;
+Statement 1;
+..........;
+Statement n;
+} while (condition);
+
+
+!!! Необходимо обращать внимание - где в цикле do while и while  стоит апдейт стейтмент
+если он стоит в конце do while и вы используете continue у вас цикл будет безконечный
+
+TEST
+class Test{
+public static void main (String[]args){
+do{
+int a=5;
+System.out.println(a++ +"");
+        }while(a<=15);
+    }
+}
+Compile time error at line
+// Так как переменная а была созданаб инициораванна  и видна у нас только в теле do, внутри фигурных скобок {}
+
+}while (a<=15);

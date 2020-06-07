@@ -1,0 +1,82 @@
+class String
+Обьявление/создание обьектов класса String
+- String s1=new String("Good day");
+всегда создаётся новый обьект
+
+String is immutable-Стринг не может быть изменнён изменнен (значение стринг не меняется)
+Достигается с помощью трех факторов
+1) String хранит своё значение в privet массиве, к тому же массив имеет фиксированную длину
+сам массив может быть виден только внутри самого класса стринг
+2) String хранит своё значения в final массиве,
+следовательно его инициализация может быть только один раз
+3)Ни один из методов класса String, не изменяет индивидуальные элементы массива типа char
+
+---------------------Методы String------------------------------------------------------
+1)  length()->int --метод параметров не принимает, возвращает int(возврощает длину String):
+String s1=new String("privet");
+int l=s1.length();//16
+___________________________________________________________________________________________________________
+2)  charAt(int index)->char --метод принимает int и возвращает знак (char) в зависимости от его индекса
+String s1=new String("privet kak dela?");
+char с=s1.charAt(3)
+или
+System.out.println( s1.charAt(3));//v
+___________________________________________________________________________________________________________
+3) indexOf(char c)->int                  |--метод показывает на каком индексе находится определённый char или String
+i   nt i =s1.indexOf('i');
+           System.out.println(i);//2
+
+   indexOf(String c)->int                | если индекса нет, то будет выводиться -1
+   int i2 =s1.indexOf("kak");
+           System.out.println(i2);//7 так как перый знак,
+            с которого начинается "kak" находиться на 7 позиции
+
+
+   indexOf(char c, int fromIndex)->int   | возврощает индекс чара, начиная с определенного индекса
+   int i3=s1.indexOf('e',5);
+           System.out.println(i3);//12
+
+   indexOf(String s, int fromIndex)->int |
+     int i4=s1.indexOf("kak",3);
+            System.out.println(i4);//7
+___________________________________________________________________________________________________________
+4) startsWith(String prefix)-->boolean              |--проверяет начинается ли наш String с какого либо значения
+boolean b1=s1.startsWith("pr");
+        System.out.println(b1);//true
+
+startsWith(String prefix, int from)-->boolean       |--проверяет начинается ли наш String с какого либо значения и определенного индекса
+boolean b2=s1.startsWith("pr",2);
+        System.out.println(b2);//false
+___________________________________________________________________________________________________________
+5) endsWith(String suffix)->boolean                 |--Такая же функциональность работы как и startsWith только смотрит в конец нащего String
+
+boolean b3=s1.endsWith("a?");
+        System.out.println(b3);//true
+___________________________________________________________________________________________________________
+6) substring(int beginIndex)->String                |--Возвращает кусок String  с помощью индекса (с Index и до конца)
+ String sub1=s1.substring(4);
+        System.out.println(sub1);//et kak dela?
+
+ substring(int beginIndex, int endIndex)->String   |--Возвращает кусок String  с помощью начального и конечного индекса
+  String s3=s1.replace('r','k');
+          System.out.println(s3);//pkivet kak dela?
+String sub2=s1.substring(3,9);
+        System.out.println(sub2);//vet ka
+___________________________________________________________________________________________________________
+8) trim()->String                                   |--Метод без параметров,уберает все пробелы по бокам возвращает String, тоже создает новый Стринг
+ String s2=s1.trim();
+        System.out.println(s2);//privet kak dela?
+___________________________________________________________________________________________________________
+7) replace(char oldChar, char newChar)-->String             |--Метод заменяет char или String и возвращает String
+String s3=s1.replace('r','k');
+        System.out.println(s3);// Было privet kak dela? стало -->pkivet kak dela?
+
+ replace(String oldString, String newString)-->String
+ String s4=s1.replace("vet","vivka);
+        System.out.println(s4); // Было privet kak dela? стало -->privivka kak dela?
+___________________________________________________________________________________________________________
+8) concat(String str)-->String                                  |--Метод метод конатенации
+ String s5="drug";
+        String s6="privet,";
+        s6=s6.concat(s5);
+        System.out.println(s6);//privet,drug

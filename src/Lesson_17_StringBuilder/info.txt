@@ -1,0 +1,68 @@
+--------------------class String Builder-------------------------------
+class String Builder позволяет менять значение типа String
+
+class String Builder-mutable
+--constructors--
+1) StringBuilder sb1=new StringBuilder();
+2) StringBuilder sb2=new StringBuilder("good day");
+3) StringBuilder sb3=new StringBuilder(50); --50- говорит о том что вмистимость данного обьекта, будет 50 символов по умолчанию 16
+4) StringBuilder sb4=new StringBuilder(sb2);
+
+----------------Методы String Builder------------------
+1) метод  length()->int
+_____________________________________________________________________________________________________
+2)  charAt(int index)->char --метод принимает int и возвращает знак (char)
+_____________________________________________________________________________________________________
+3) indexOf(String s)->int
+   indexOf(String s, int fromIndex)->int
+_____________________________________________________________________________________________________
+4) substring(int beginIndex)->String
+substring(int beginIndex, int endIndex)->String
+_____________________________________________________________________________________________________
+5) subsequence(int start, int end)-->CharSequence --метод такой же как и substrings, выводит последовательность символов
+_____________________________________________________________________________________________________
+6) append(dataType dt)-->StringBuilder--Добовляет в конец нашего StringBuilder дополнительное значение (меняет сам StringBuilder)
+
+sb2.append(22);
+        System.out.println(sb2);//good day22
+sb2.append(true);//good day22true
+и так далее, прнимает любой тип данных и обьекты
+_____________________________________________________________________________________________________
+7) insert(int toIndex, dataType dt)-->StringBuilder --Добовляет данные по номеру индекса(вставляет данные в определённую позицию)
+System.out.println(sb2.insert(5,55));//good 55day
+System.out.println(sb2.insert(sb2.length(),"Hello"));//good 55dayHello
+_____________________________________________________________________________________________________
+8) delete(int start, int end)-->StringBuilder--удаляет символы, начиная с определенного индекса,
+заканчивая определенным индексом но не включая его(-1)(Изменяет StringBuilder )
+ sb10.delete(2,5);
+        System.out.println(sb10);//He World 
+_____________________________________________________________________________________________________
+9)deleteCharAt(int index)-->StringBuilder Метод удоляеть определенный символ по индексу, меняет StringBuilder
+_____________________________________________________________________________________________________
+10)reverse()-->StringBuilder разворачивает String Builder
+_____________________________________________________________________________________________________
+11) replace(int start, int end, String s)-->StringBuilder --метод меняет отрезок начиная с n-ой позиции(int start),
+ заканчивая n-ой позицией(int end) на определённый String
+ StringBuilder sb12= new StringBuilder("Vsem privet");
+         sb12.replace(0,4,"Pete");
+         System.out.println(sb12);//Pete privet
+_____________________________________________________________________________________________________
+12)capacity()-->int возвращает количество мест в массиве StringBuilder
+System.out.println(sb12.capacity());//27
+
+_____________________________________________________________________________________________________
+Метод equals в классе StringBuilder не работает как в класее String
+
+  StringBuilder sb1 = new StringBuilder("123");
+  StringBuilder sb2 = new StringBuilder("123");
+  System.out.println(sb1.equals(sb2)); //false
+  StringBuilder sb3 = sb2;
+  System.out.println(sb3.equals(sb2));//true
+_____________________________________________________________________________________________________
+
+----------------------------Еще два конструктора класса String----------------------------------------
+1) StringBuilder sb1=new StringBuilder("Hello");
+  String s1=new String(sb1);
+
+2) StringBuffer sb2=new StringBuffer("Hello");
+   String s2=new String(sb2);

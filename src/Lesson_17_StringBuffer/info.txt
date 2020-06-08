@@ -1,0 +1,1 @@
+StingBuffer-более потокобезопасней чем StringBuilder

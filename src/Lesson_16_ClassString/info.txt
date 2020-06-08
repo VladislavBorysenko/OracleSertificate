@@ -23,7 +23,7 @@ char с=s1.charAt(3)
 System.out.println( s1.charAt(3));//v
 ___________________________________________________________________________________________________________
 3) indexOf(char c)->int                  |--метод показывает на каком индексе находится определённый char или String
-i   nt i =s1.indexOf('i');
+int i =s1.indexOf('i');
            System.out.println(i);//2
 
    indexOf(String c)->int                | если индекса нет, то будет выводиться -1
@@ -57,8 +57,7 @@ ________________________________________________________________________________
  String sub1=s1.substring(4);
         System.out.println(sub1);//et kak dela?
 
- substring(int beginIndex, int endIndex)->String   |--Возвращает кусок String  с помощью начального и конечного индекса
-  String s3=s1.replace('r','k');
+substring(int beginIndex, int endIndex)->String   |--Возвращает кусок String  с помощью начального и конечного индекса
           System.out.println(s3);//pkivet kak dela?
 String sub2=s1.substring(3,9);
         System.out.println(sub2);//vet ka
@@ -95,7 +94,23 @@ String s1="Kak sebya chuvstvuesh?";
 boolean b=s1.contains("bya");
         System.out.println(b);//true
 ___________________________________________________________________________________________________________
+12) isBlank()-->boolean                 |--Метод не принемает никаких значений и проверяет есть ли в String пробелы или табы
+ String s1="Privet";
+        System.out.println(s1.isBlank());//false
+ String s2="   ";
+         System.out.println(s2.isBlank());//true
+___________________________________________________________________________________________________________
+13) isEmpty()-->boolean                  |--Метод не принемает никаких значений и проверяет пустой String или нет
+ String s3="";
+        System.out.println(s3.isEmpty());//true
+___________________________________________________________________________________________________________
+14) strip()-->String                    |-- тоже как и trim удаляет пробелы и табы
+ String s4="         Privet    ";
+        System.out.println(s4.strip());//privet
 
+ stripLeading()                         |удаляет пробелы в начале String
+
+ stripTrailing()                        |удаляет пробелы вконце String
 -------------------------------При method chaining методы выполняются последовательно слева на право--------------------------------------
 method chaining-цепочка методов
 
@@ -108,6 +123,30 @@ String s3=s1.concat(s2).trim().replace("word","mir").substring(6,10); (так ж
 //bya
 //bya chuvstvuesh?
 
+
 ----------------------------Определение равенства String---------------------------------------------------------------------------------------
 
 ==
+ String s1=new String ("ok");
+        String s2=new String ("ok");
+        System.out.println(s1==s2);//false
+        String s3=s2;
+        System.out.println(s2==s3);//true
+
+method equals-есть у всех классов, необходим для сравнения обьектов
+String s1=new String ("ok");
+        String s2=new String ("ok");
+ System.out.println(s1.equals(s2));//true
+
+!= --не равно
+
+ System.out.println(s1!=s3);//true
+
+method equals ignore case--метод сравнивает два значения игнорируя регистр букв
+String s10="KAK DELA?";
+        String s11="kak dela?";
+        boolean b;
+        b=s10.equalsIgnoreCase(s11);
+        System.out.println(b);//true
+        System.out.println(s10==s11);//false
+        System.out.println(s10.equals(s11));//false

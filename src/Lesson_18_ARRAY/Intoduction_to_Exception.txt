@@ -1,0 +1,5 @@
+Exception -исключения
+
+NegativeArraySizeException - размер массива не может быть отрицательным
+ArrayIndexOutOfBoundsException - вы вышли за граници массивы по его длине
+NullPointerException - говорит о том что мы пытаемся узнать информацию со значением Null(без значения   )

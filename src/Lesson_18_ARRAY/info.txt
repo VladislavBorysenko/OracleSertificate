@@ -89,5 +89,24 @@ int[]array4=new int[]{1,2,3,4};
 int[]array4=new int[3]
 
 ------------------------class Arrays-----------------------------------------------------------
+Методы Arrays
+
+1) sort(array) --метод сортирует массив Arrays.sort(array1);
+int[]array1={1,2,3};
+Arrays.sort(array1);
+
+
+2) binarySearch(array,value) --метод выполняет поис определенного значения в определенном массиве
+(данный поиск будет корректно работать в отсортированном массиве)
+данный метод выдаёт индекс на котором находится наш элемент
+Усли элемент не найден, метод возвращает отрицательный индекс
+int[]array1={1,2,3};
+Arrays.sort(array1);
+int index=Arrays.binarySearch(array1,2);
+
+int array1[]={1,43,6,7,8};
+после sort наш массив будет выглядить так:{1,6,7,8,43}
+int index1=Arrays.binarySearch(array1,8);
+System.out.println(index1);//3
 
 

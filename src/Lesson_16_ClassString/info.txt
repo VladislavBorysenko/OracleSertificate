@@ -3,6 +3,9 @@ class String
 - String s1=new String("Good day");
 всегда создаётся новый обьект
 
+char[]array=new char[]{'p','r','i','v','e','t'};
+String s=new String array;
+
 String is immutable-Стринг не может быть изменнён изменнен (значение стринг не меняется)
 Достигается с помощью трех факторов
 1) String хранит своё значение в privet массиве, к тому же массив имеет фиксированную длину

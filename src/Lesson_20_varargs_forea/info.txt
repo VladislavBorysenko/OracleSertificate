@@ -1,0 +1,23 @@
+-----Command line arguments-------------
+Command line arguments-аргументы которые записуются в командной строке
+
+javac Test1.java -таким образом производиться компиляция программы
+java Test1 Hello 14 true - таким образом мы запускаем программу// String args[]={"Hello", "14","true"}
+-data type : String
+
+----Variable arguments=varargs----
+varargs - аргументы, количество которых может быть абсолютно разное
+int...a
+правила
+Три точки пишутся между типом данных и именем переменной
+Тип данных может быть какой угодно
+В листе параматров может быть только один varargs
+В листе параметров varargs должен стоять самым последним
+
+Следующий код вызывает Compile time error
+void abc(int...a){
+//some code;
+}
+void abc(int array[]){
+//some code;
+}

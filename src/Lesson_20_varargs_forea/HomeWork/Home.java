@@ -1,17 +1,42 @@
 package Lesson_20_varargs_forea.HomeWork;
 
 public class Home {
-    public String[] abc(String[]... str) {
-        String[] str1;
-        for (String[] s:str
-             ) {
-            
+    public static String[] abc(String[]... array1) {
+        int lenght = 0;
+        for (String[] array2 : array1) {
+            lenght += array2.length;
         }
-        return str1;
-
+        String[] target = new String[lenght];
+        int count = 0;
+        for (String[] array2 : array1) {
+            for (String s : array2) {
+                target[count] = s;
+                count++;
+            }
+        }
+        return target;
     }
 
+
     public static void main(String[] args) {
+        String[] target = abc(new String[]{"ok", "privet", "poka"},
+                new String[]{"ok", "hello", "bye"});
+
+        for (String s : args) {
+            for (int i = 0; i < target.length; i++) {
+                if (s.equals(target[i])) {
+                    target[i] = null;
+                }
+
+            }
+        }
+        for (String s : target) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+        {
+
+        }
 
     }
 }

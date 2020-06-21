@@ -1,0 +1,17 @@
+---Array List----
+List - списоок
+В основе ArrayList лежит Array(Массив)
+Тип данных который будте лежать в основе ArrayList это Object
+//Object это класс в java который является  самым главным(самым первым классом в Джаве) класс у торого нету Parent class
+Элементами класса Object, могут быть референс типы данных
+
+-------Создание Array List-----
+ArrayList<DataType>list1=new ArrayList<DataType>();
+ArrayList<DataType>list2=new ArrayList<>();
+------Методы Array List-----
+ Метод добавление элемента в ArrayList - add
+add(DataType element)-->boolean
+add(int index, DataType element)-->boolean
+
+
+

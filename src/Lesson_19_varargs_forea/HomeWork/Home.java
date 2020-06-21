@@ -1,4 +1,4 @@
-package Lesson_20_varargs_forea.HomeWork;
+package Lesson_19_varargs_forea.HomeWork;
 
 public class Home {
     public static String[] abc(String[]... array1) {

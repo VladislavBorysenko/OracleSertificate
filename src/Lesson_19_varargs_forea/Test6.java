@@ -1,4 +1,4 @@
-package Lesson_20_varargs_forea;
+package Lesson_19_varargs_forea;
 
 public class Test6 {
     public static void main(String[] args) {

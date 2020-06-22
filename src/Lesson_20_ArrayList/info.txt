@@ -12,6 +12,13 @@ ArrayList<DataType>list2=new ArrayList<>();
  Метод добавление элемента в ArrayList - add
 add(DataType element)-->boolean
 add(int index, DataType element)-->boolean
+addAll(ArrayList aL)-->boolean  --Добовляет в конец другой ArrayList
+addAll(int Index, ArrayList aL)-->boolean
+get(int index)-->dataType -Возвращает элемент ArrayList-a
+set(int index, DataType)-->DataType -помещает элемент в указаный индекс(Работает как реплейс)заменяет элемент
+remove(ObjectElement)-->boolean -возвращает булеан (удолился элемент или нет)
+remove(int index)-->DataType (удоляет элемент)
+
 
 
 

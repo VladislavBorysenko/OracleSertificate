@@ -25,14 +25,29 @@ public class Test3 {
         list.remove(sb1);//удаляем обьект sb1
         list.remove("poka");
 
-        ArrayList<String> list2=new ArrayList<>();
-        ArrayList<String> list3=new ArrayList<>();
-        list2.add("Petrov");
-        list2.add("Sidorov");
+        ArrayList<StringBuilder> list2=new ArrayList<>();
+        ArrayList<StringBuilder> list3=new ArrayList<>();
+        list2.add(new StringBuilder("Petrov"));
+        list2.add(new StringBuilder("Sidorov"));
 
-        list3.add("poka");
-        list3.add("privet");
+        list3.add(new StringBuilder("poka"));
+        list3.add(new StringBuilder("privet"));
         list2.addAll(list3);//добавили в конец list2 - list3
-
+        list2.addAll(2,list3);//добавили в конец list2 - list3
+        for (StringBuilder s:list2) {
+            System.out.print(s+" ");
+        }
+        list2.get(1).append("!");
+        System.out.println();
+        for (StringBuilder s:list2
+        ) {
+            System.out.print(s+" ");
+        }
+        list.clear();
+        System.out.println();
+        for (StringBuilder s:list
+        ) {
+            System.out.print(s+" ");
+        }
     }
 }

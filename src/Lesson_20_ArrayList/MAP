@@ -1,0 +1,6 @@
+Map -пара (Ключ, значение)
+Реализует два класса
+HashMap и TreeMap
+  Map<Integer,String>map=new java.util.HashMap<>();
+  map.put(777,"Ivanov");
+   System.out.println("map "+map);

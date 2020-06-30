@@ -29,7 +29,7 @@ public class Home {
                 }
 
             }
-        }
+           }
         for (String s : target) {
             System.out.print(s + " ");
         }

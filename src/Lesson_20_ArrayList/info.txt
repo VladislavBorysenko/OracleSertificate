@@ -11,14 +11,100 @@ ArrayList<DataType>list2=new ArrayList<>();
 ------Методы Array List-----
  Метод добавление элемента в ArrayList - add
 add(DataType element)-->boolean
+list.add(DataType element);
 add(int index, DataType element)-->boolean
+list.add(int index, DataType element);
 addAll(ArrayList aL)-->boolean  --Добовляет в конец другой ArrayList
+list.addAll(ArrayList aL);
 addAll(int Index, ArrayList aL)-->boolean
+list.addAll(int Index, ArrayList aL)
+-------------------------------------------------
 get(int index)-->dataType -Возвращает элемент ArrayList-a
 set(int index, DataType)-->DataType -помещает элемент в указаный индекс(Работает как реплейс)заменяет элемент
+-------------------------------------------------
 remove(ObjectElement)-->boolean -возвращает булеан (удолился элемент или нет)
 remove(int index)-->DataType (удоляет элемент)
+------------------------------------------------
+clear()-->void Очищает наш ArrayList
+list.clear();
+------------------------------------------------
+indexOf(Object element)-->int метод возвращает индекс элемента который ищем
+list.indexOf(new String("Hello"));
+lastIndexOf(Object element)-->int  Выдает индекссамого последнегщ совпадения
+list.lastIndexOf(new String("Hello"))
+!!!!!!!!!! если элемент не найден, индекс будет равен -1
+-----------------------------------------------
+size()->int --Возвращает размер ArrayList
+list.size()
+-----------------------------------------------
+isEmpty()--> boolean --Метод показывает пустой ArrayLst или нет, возвращает true или false
+list.isEmpty()//Если ArrayList не пустой, возвращается false
+-----------------------------------------------
+contains(Object element)--> boolean Принимает в параметр обьект и проверяет: есть ли такой обьект в ArrayList
+list.contains("Poka")// true если есть обьект Poka в ArrayList или false если нет
+-----------------------------------------------
+toString() -->String возвращает значение String
+list.toString()
+-----------------------------------------------
+clone()-->Object
+list.clone()
+Но так как clone() возвращает Object, то нам может быть прийдетса кастовать
+(ArrayList<StringBuilder>) list.clone();
+----------------------------------------------
+Позволяет переводить ArrayList в Array
+toArray()-->object[] -переводит Array в обджект массив
+ Object[] array1 =list.toArray();
+toArray(DataType []array)-->DataTape [] возвращает массив указаных в параметре типов данных
+ StringBuilder[]arr2=list.toArray(new StringBuilder[10]);
+----------------------------------------------
+Array.asList(DataType [])-->List<DataType> Преобразовует  массив в list
+  StringBuilder []array={sb1,sb2,sb3,sb1};
+        List<StringBuilder>list8= Arrays.asList(array);
+----------------------------------------------
+Collections.sort(ArrayList<DataType>)-void сортирует ArrayList
+  Collections.sort(list);
+----------------------------------------------
+equals(ArrayList<DataType>)-->boolean  Производить сравнение обьектов ArrayList
+list.equals(list2)
+----------------------------------------------
+Iterator & ListIterator
+Iterator - повторитель
+    Iterator<String> it=list.iterator();
+        while (it.hasNext()){
+            System.out.println(it.next());
+        } //позволяет выводить элементы list
 
+ListIterator<String>lit=list.listIterator();
+        while (lit.hasNext()){
+            System.out.print("\n"+lit.next());
+        }
+............Способ написания.............
+            some code
+            ........
+Iterator<Data Type> iter=aL.iterator();
+        while(iter.hasNext())
+ { System.out.println(iterator.next()); }
 
+            some code
+            ........
+ListIterator<Data Type> iter=aL.listIterator();
+        while(iter.hasNext())
+{ iter.next();
+iter.remove();}
 
+---------------------------------------------
+compare и mismatch - используются для сравнения двух масивов примитивных данных
+-Лексикографическое сравнение
 
+ int[] array1={1,2,3,4,5,6};
+ int[] array2={1,2,3,5};
+ Arrays.compare(array1,array2)//-1
+ Arrays.compare(array2,array1)// 1
+
+ метод mismatch  находит индекс первого расхождения массива
+ или -1, если они одинаковы
+  char[]array3={'p','r','v','e','t'};
+  char[]array4={'p','r','v','i','v','k','a'};
+  char[]array5={'p','r','v','i','v','k','a'};
+ System.out.println(Arrays.mismatch(array3,array4));//3
+ System.out.println(Arrays.mismatch(array5,array4));//-1

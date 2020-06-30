@@ -1,0 +1,22 @@
+------------------------------------------------
+removeAll(Collection<?> c)-->boolean  удоляет все элементы из ArrayList который находится в параметре
+ al1.removeAll(al2);
+------------------------------------------------
+retain.All(Collection<?> c)--> boolean проверяет содержит ли list1 элементы list2 ?
+boolean result=al1.containsAll(al2);
+--------------------------------------------------
+subList(int fromIndex, int toIndex)->List<E> --создает из имеющего ArrayList отрывок, и возвращает List (представление части ArrayList )
+ List<String>list=al1.subList(1,3);
+--------------------------------------------------
+toArray()->Object Если из ArrayList необходимо получить массив
+Object[]array=al1.toArray();
+
+toArray(T[]a)->T[]  Если необходимо получить массив определенных типов данных
+String [] array2=al1.toArray(String[]::new);
+String [] array3=al1.toArray(new String[3]);
+-------------------------------------------------
+ListOf(E...elements)->List<E> --Статические методы которые в параметр принемают коллекцию и возврщают список, которы нельзя модифициорвать
+List.copyOf(Collection<E>c)->List<E>
+
+List<String>list=List.of("Odin","dva","tri"); // такой лист не возможно модифицировать
+List<String> list2 = List.copyOf(al1);

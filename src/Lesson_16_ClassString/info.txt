@@ -77,7 +77,7 @@ String s3=s1.replace('r','k');
  String s4=s1.replace("vet","vivka);
         System.out.println(s4); // Было privet kak dela? стало -->privivka kak dela?
 ___________________________________________________________________________________________________________
-8) concat(String str)-->String                                  |--Метод метод конатенации
+8) concat(String str)-->String                                  |--Метод метод конкатенации
  String s5="drug";
         String s6="privet,";
         s6=s6.concat(s5);

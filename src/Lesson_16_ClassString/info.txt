@@ -131,10 +131,10 @@ String s3=s1.concat(s2).trim().replace("word","mir").substring(6,10); (так ж
 
 ==
  String s1=new String ("ok");
-        String s2=new String ("ok");
-        System.out.println(s1==s2);//false
-        String s3=s2;
-        System.out.println(s2==s3);//true
+ String s2=new String ("ok");
+ System.out.println(s1==s2);//false
+ String s3=s2;
+ System.out.println(s2==s3);//true
 
 method equals-есть у всех классов, необходим для сравнения обьектов
 String s1=new String ("ok");

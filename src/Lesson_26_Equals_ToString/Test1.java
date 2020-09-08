@@ -12,7 +12,8 @@ public class Test1 {
         list.add(c1);
         list.add(c2);
         list.add(c3);
-        System.out.println(list.contains(c4));
+        System.out.println(c3);
+       // System.out.println(list.contains(c4));
         //   System.out.println(c1==c2);
         //   System.out.println(c1.equals(c2));
         //   System.out.println(c1.equals(c3));
@@ -35,6 +36,10 @@ class Car {
             return false;
         }
 
+    }
+
+    public String toString(){
+        return "Mashina cveta "+color+ " i s motorom "+engine;
     }
 }
 

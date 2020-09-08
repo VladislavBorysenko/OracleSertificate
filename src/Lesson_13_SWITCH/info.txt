@@ -8,10 +8,10 @@ default: our code; break;
 }
 
 тип данных switch expression
--byte
--short
--int
--char
+-byte, Byte
+-short, Short
+-int, Integer
+-char, Char
 -String
 
 COMPILE TIME CONSTANCE (То что может быть в case)

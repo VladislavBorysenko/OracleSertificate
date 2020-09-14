@@ -1,0 +1,6 @@
+ArrayIndexOutOfBoundsException - выход за приделы массива
+NullPointerException - пустое значение
+FileNotFoundException - Не удается найти указанный файл
+IOException - разрыв потока
+!!!FileNotFoundException происходит от IOException
+

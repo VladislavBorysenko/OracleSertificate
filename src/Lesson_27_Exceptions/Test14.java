@@ -1,6 +1,5 @@
-package Lessons_27_Exceptions;
+package Lesson_27_Exceptions;
 
-import javax.imageio.IIOException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;

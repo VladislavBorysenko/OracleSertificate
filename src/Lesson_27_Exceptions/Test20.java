@@ -1,6 +1,4 @@
-package Lessons_27_Exceptions;
-
-import java.io.FileNotFoundException;
+package Lesson_27_Exceptions;
 
 public class Test20 {
    static void abc(){

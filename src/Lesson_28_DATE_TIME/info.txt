@@ -1,0 +1,161 @@
+_____________________________Дни и время________________________________________________________________________________
+LocalDate класс содержит информацию о дне: год, месяц, день.
+LocalTime класс содержит информацию о времени: час, минуты, секунда.
+LocalDateTime класс содержит информацию о дне и времени: год, месяц, день, час, минуты, секунды, наносекунды
+Данные класаы содержаться в пакете java.time
+
+________________________Создание обьектов классов LocalDate, LocalTime, LocalDateTime___________________________________
+У этих 3-х классов конструктор имеет access modifier privet. Поэтому, мы не можем создавать обьекты этих классов
+используюя конструкторы.
+
+
+
+____________________ Методы of__________________________________________________________________________________________
+Методы of возвращают обьект соответсвуещего типа.(создаем обьекты)
+
+public static LocalDate of(int год, int месяц, int день_месяца)
+public static LocalDate of(int год, Month месяц, int день_месяца)
+LocalDate ld=LocalDate.of(2010,12,4);
+
+public static LocalTime of(int час, int минута)
+public static LocalTime of(int час, int минута, int секунда)
+public static LocalTime of(int час, int минута, int секунда, int наносекунда)
+
+public static LocalDateTime of(int год, int месяц, int день_месяца, int час, int минута)
+public static LocalDateTime of(int год, int месяц, int день_месяца, int час, int минута, int секунда)
+public static LocalDateTime of(int год, int месяц, int день_месяца, int час, int минута, int секунда, int наносекунда)
+public static LocalDateTime of(LocalDate day, LocalTime time)
+
+!!!при не корректном указании параметров метода of выбрасывается соответствующий exception
+
+____________________________Изменение обьектов классов LocalDate, LocalTime и LocalDateTime_____________________________
+ Обьекты данных трек классов являются immutable
+LocalDate:
+plusDays(long количество_дней)->LocalDate // возвращает новый обьект
+minusDays(long количество_дней)->LocalDate
+plusWeeks(long количество_недель)->LocalDate
+minusWeeks(long количество_недель)->LocalDate
+plusMonths(long количество_месяцев)->LocalDate
+minusMonths(long количество_месяцев)->LocalDate
+plusYears(long количество_лет)->LocalDate
+minusYears(long количество_лет)->LocalDate
+
+LocalTime:
+plusHours(long количество_часов)->LocalTime
+minusHours(long количество_часов)->LocalTime
+plusMinutes(long количество_минут)->LocalTime
+minusMinutes(long количество_минут)->LocalTime
+plusSeconds(long количество_секунда)->LocalTime
+minusSeconds(long количество_секунл)->LocalTime
+plusNanos(long количество_наносекунд)->LocalTime
+minusNanos(long количество_наносекунд)->LocalTime
+
+LocalDateTime - охватывают методы LocalDate и LocalTime и в оутпуте возвращают LocalDateTime.
+
+Методы isAfter и isBefore могут быть использованны для сравненеи обьектов класса LocalDate, LocalTime и LocalDateTime.
+Данные методы возвращают boolean. Компилятор разрешает сравнивать только обьекты соответствующих классов.
+ld1.isAfter(ld2)
+ld1.isBefore(ld2)
+
+_________________________класс Period___________________________________________________________________________________
+Класс Period имеет конструктор с access modifier private. Методы of возвращают обьект типа Period
+public static Period ofDays(int количество_дней)
+public static Period ofWeeks(int количество_недель)
+public static Period ofMonths(int количество_месяцев)
+public static Period ofYears(int количество_лет)
+public static Period of(int количество_лет, int количество_месяцев,int количество_недель, int количество_дней)
+
+Методы plus и minus могут быть использованны для прибовления и отнимания периодов к/от объектов классов LocalDate, LocalDateTime.
+При попытки использования методов plus или minus для сложения и отнимания периода к/от объекта класса LocalTime будет брошен
+exception.
+
+При создании обьекта класса Period не работает method chaining метода of.
+При попытки method chaining только последний метод имеет значение.
+
+
+____________________класс Duration______________________________________________________________________________________
+Класс Duration отвечает за работу м меньшеми временными долями:дни, часы, минуты, секунды
+
+Класс Duration имеет конструктор c access modifier privet. Методы of возвращают обьект типа Duration
+
+public static Duration ofDays(long колич_дней)
+public static Duration ofHours(long колич_часов)
+public static Duration ofMinutes(long колич_минут)
+public static Duration ofSeconds(long колич_секунд)
+public static Duration ofMillis(long колич_милисекунд)
+public static Duration ofNanos(long колич_наносекунд)
+
+Duration предназначен для работы с LocalTime и LocalDateTime
+
+Методы plus и minus могут быть использованны для прибавления и отнимания объекта класса Duration к/от объектов класса
+LocalTime и LocalDateTime. При попытке использования методов plus или minus для сложения или отнемания объекта класса Duration
+к/от обьекта класса LocalDate будет выброшен Exception
+
+При создании обьекта класса Duration не работает method chaining метода of. При попытки method chaining только последний
+метод of имеет значение
+
+
+_________________________Получение информации из класса LocalDate_______________________________________________________
+
+getDayOfWeek()->DayOfWeek
+getDayOfMonth()->int
+getDyOfYear()->int
+getMonth()->month name
+getMonthValue()->int
+getYear()->int
+_________________________Получение информации из класса LocalTime_______________________________________________________
+
+getHour()->int
+getMinute()->int
+getSecond()->int
+getNano()->int
+
+_________________________Получение информация из класса LocalDateTime___________________________________________________
+
+Данный класс включает в себя все методы из классов LocalDate и LocalTime
+
+
+
+_________________________Класс DateTimeFormatter________________________________________________________________________
+
+данный класс находиться в пакете java.time.format
+
+с помощью метода format вы можете изменять вывод вашей даты или вашего времени на экран
+
+LocalDateTime ldt=LocalDateTime.of(2014, Month.MARCH, 10,15,20,30);
+DateTimeFormatter f=DateTimeFormatter.ISO_WEEK_DATE;
+System.out.println(ldt.format(f));
+
+LocalDateTime ldt=LocalDateTame.of(2020,Month.MARCH, 10,15,20,30)
+DateTimeFormatter f1=DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
+System.out.println(ld.format(f1);
+DateTimeFormatter f2=DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+System.out.println(ld.format(f2);
+
+Методы класса DateTimeFormatter ofLocalizedDate, ofLocalizedTime и ofLocalizedDateTime должны создавать формат,
+который будет применяться для соответствующих классов.
+
+Метод format имеется не только у обьектов классов LocalDate, LocalTime и LocalDateTime, но и у класса DateTimeFormatter,
+что делает возможным написание последнего выражения в следующем виде:
+System.out.println(f2.format(ldt));
+И эти два выражения имеют один и тот же результат
+
+С помощью метода ofPattern вы можете создавать свой формат.
+
+LocalDateTime ldt=LocalDateTime.of(2014, Month.MARCH,10,15,20,30,5555);
+"Y"=2014  "YY"=14  "YYYY"=2014 //год
+"M"=3     "MM"=03  "MMM"=мар   "MMMM"=марта //месяц
+"w"=11    "ww"=11 //неделя
+"d"=10    "dd"=10 //день
+"h"=3     "hh"=03 //часы
+"m"=20    "mm"=20 //минуты
+"s"=30    "ss"=30 //секунды
+"n"=5555  "nnnnn"=05555 //наносекунды
+
+У объектов LocalDate, LocalTime, LocalDateTime нужно пытаться брать ту информацию, которую они могут содержать.
+В противном случае будет выбрасываться исключение.
+
+Метод parse переводит String в обьект классов LocalDate, LocalTime и LocalDateTime
+
+Если ваш String обьект соответствует формату даты или времени по умолчанию, то вы можете не использовать 2-ой параметр
+метода parse - шаблон. Если не соответсвует или если вы не знаете форматов по умолчанию, то используйте шаблон.

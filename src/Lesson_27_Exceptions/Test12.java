@@ -1,4 +1,4 @@
-package Lessons_27_Exceptions;
+package Lesson_27_Exceptions;
 
 public class Test12 {
    static void abc() {

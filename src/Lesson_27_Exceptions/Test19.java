@@ -1,8 +1,7 @@
-package Lessons_27_Exceptions;
+package Lesson_27_Exceptions;
 
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class Test19 {
     public static void main(String[] args) {

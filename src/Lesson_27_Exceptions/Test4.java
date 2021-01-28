@@ -1,9 +1,8 @@
-package Lessons_27_Exceptions;
+package Lesson_27_Exceptions;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class Test4 {
     void abc() throws FileNotFoundException {

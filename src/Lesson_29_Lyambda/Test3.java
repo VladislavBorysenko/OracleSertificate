@@ -28,15 +28,16 @@ public class Test3 {
 
 
         si.testStudents(studentArrayList, (Student1 st)->{return st.avgGrade>8.3;});
-//        System.out.println("_______________________________________________________________________________________");
-//        si.testStudents(studentArrayList, fsug);
-//        System.out.println("_______________________________________________________________________________________");
-//        si.testStudents(studentArrayList, fsoa);
-//        System.out.println("_______________________________________________________________________________________");
-//        si.testStudents(studentArrayList, fsbs);
-//        System.out.println("_______________________________________________________________________________________");
-//        si.testStudents(studentArrayList, fsmc);
-//        System.out.println("_______________________________________________________________________________________");
+        System.out.println("_______________________________________________________________________________________");
+        si.testStudents(studentArrayList,  (Student1 st)->{return st.avgGrade>4.3;});
+        System.out.println("_______________________________________________________________________________________");
+        si.testStudents(studentArrayList,  (Student1 st)->{return st.avgGrade>8.0;});
+        System.out.println("_______________________________________________________________________________________");
+        si.testStudents(studentArrayList,   st-> st.avgGrade>5.7);
+        System.out.println("_______________________________________________________________________________________");
+        si.testStudents(studentArrayList, (Student1 st)->{return st.avgGrade>10;});
+        System.out.println("_______________________________________________________________________________________");
+        si.testStudents(studentArrayList, (Student1 st)->{return st.avgGrade>7.2 && st.age<23;});
     }
 }
 class Student1 {

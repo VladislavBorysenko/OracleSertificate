@@ -1,0 +1,4 @@
+var - Local variable type inference
+Вместо TestInferenceType tit=new TestInferenceType();
+пишем var tit=new TestInferenceType();
+!!!относиться только к локальным переменным

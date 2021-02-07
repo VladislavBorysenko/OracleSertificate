@@ -1,4 +1,4 @@
-package Lesson2;
+package Lesson_2;
 
 public class lesson2_Variables_dataType {
     public static void main(String[] args) {

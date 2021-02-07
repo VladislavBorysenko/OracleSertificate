@@ -51,10 +51,10 @@ ArrayList<Employee>employeeArrayList=new ArrayList<>();
 
 
 
-    filtraciyaRabotnikov(employeeArrayList,employee -> employee.salary>200 &&employee.department.equals("IT"));
+    filtraciyaRabotnikov(employeeArrayList,x -> x.salary>200 &&x.department.equals("IT"));
         System.out.println("--------------------------------------------------------------------------------");
-    filtraciyaRabotnikov(employeeArrayList,employee -> employee.salary<450 &&employee.name.startsWith("E"));
-    filtraciyaRabotnikov(employeeArrayList,employee -> employee.name.equals(employee.department));
+    filtraciyaRabotnikov(employeeArrayList,x -> x.salary!=450 &&x.name.startsWith("E"));
+    filtraciyaRabotnikov(employeeArrayList,x -> x.name.equals(x.department));
     }
 }
 

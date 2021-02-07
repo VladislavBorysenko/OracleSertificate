@@ -1,0 +1,9 @@
+--------------------------------Generic---------------------------------------------------------------------------------
+Смысл введения дженериков в джаву:
+Type Safe - типобезопасность
+Reusable Code - многократное использование кода без изменений
+Parametrized class - параметрический класс
+Parametrized method - параметрический методы (джинерик методы)
+Type erasure - стерание типов
+problems with method overloading
+problems with method overriding

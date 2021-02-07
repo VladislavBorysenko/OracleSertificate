@@ -47,3 +47,9 @@ boolean test(T t);
 Интерфейс Predicate находиться в java.util.functional
 
 Метод класса ArrayList removeIf использует Predicate<T>.
+
+functional interfaces - могут содержать толко один обстрактній метод
+
+______________interface Consumer & Supplier_______________________________________________________________
+consumer - потребитель
+suplier - поставщик

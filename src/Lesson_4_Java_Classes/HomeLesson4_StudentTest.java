@@ -1,4 +1,4 @@
-package Lesson4_Java_Classes;
+package Lesson_4_Java_Classes;
 
 class Student {
 

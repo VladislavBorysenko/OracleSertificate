@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Oracle sertificate:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Oracle_sertificate_jar</output-path>
+    <root id="archive" name="Oracle sertificate.jar">
+      <element id="module-output" name="Oracle sertificate" />
+      <element id="module-output" name="module2" />
+      <element id="module-output" name="module3" />
+      <element id="module-output" name="modul2" />
+      <element id="module-output" name="module1" />
+      <element id="module-output" name="Oracle sertificate_module exemple" />
+    </root>
+  </artifact>
+</component>

@@ -8,6 +8,7 @@ public class Test2 {
         array1 = new String[3];
         array2 = new int[3][];
 
+
 //проводим динаичискую инициализацию
         for (int i = 0; i < array1.length; i++) {
             array1[i] = "privet" + i;
